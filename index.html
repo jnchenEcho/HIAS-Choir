@@ -4,6 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>视频合集</title>
+  <style>
+    body {
+      text-align: center; /* 让标题、下拉框、视频都居中 */
+      font-family: Arial, sans-serif;
+    }
+    video {
+      display: block;       /* 转换成块级元素 */
+      margin: 20px auto;    /* 自动左右边距实现水平居中 */
+      border: 2px solid #333;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+  </style>
   <script>
     function changeVideo() {
       let select = document.getElementById("videoSelect");
