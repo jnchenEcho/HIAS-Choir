@@ -1,15 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HIAS-Choir</title>
+  <title>视频合集</title>
+  <script>
+    function changeVideo() {
+      let select = document.getElementById("videoSelect");
+      let player = document.getElementById("player");
+      player.src = "Video_compression/" + select.value;
+    }
+  </script>
 </head>
 <body>
-  <video controls autoplay muted loop width="800">
-    <source src="Video_compression/20230611_DengNiLai_compression.mp4"
-     type="video/mp4">
-    Your browser does not support the video tag.
+  <h1>合唱团视频</h1>
+
+  <select id="videoSelect" onchange="changeVideo()">
+    <option value="20230611_DengNiLai_compression.mp4">20230611_等你来</option>
+    <option value="20230703_QiFengLe_compression.mp4">20230703_起风了</option>
+    <option value="20250708_GuangLiang_compression.mp4">20250708_光亮</option>
+  </select>
+
+  <br><br>
+
+  <video id="player" controls width="800">
+    <source src="Video_compression/20230611_DengNiLai_compression.mp4" type="video/mp4">
+    您的浏览器不支持 video 标签。
   </video>
 </body>
 </html>
